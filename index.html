@@ -84,7 +84,6 @@ function drawEverything() {
 		canvasContext.font = "20px sans serif";
 		showWinScreen();
 		canvasContext.fillText('Click to continue', canvas.width / 2 - 50, canvas.height / 2);
-		canvasContext.fillText("Peter's a bitch", canvas.width / 2 - 40, canvas.height / 2 + 30);
 		return;
 	}
 
@@ -203,9 +202,15 @@ function ballReset() {
 function showWinScreen() {
 	var winner;
 	if (p1Score > p2Score)
+        {
 		winner = 'Player 1 ';
+		canvasContext.fillText("Peter's still bad! :)", canvas.width / 2 - 40, canvas.height / 2 + 30);
+        }
 	else
+        {
 		winner = 'Player 2 ';
+		canvasContext.fillText("Peter's bad!", canvas.width / 2 - 40, canvas.height / 2 + 30);
+        }
 	canvasContext.fillText(winner + 'wins!', canvas.width / 2 - 40, canvas.height / 2 - 50);
 }
 
